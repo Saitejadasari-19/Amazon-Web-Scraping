@@ -68,7 +68,7 @@ def getnextpage(soup):
 response=getAmazonSearch('iphone+all+mobiles')
 soup=BeautifulSoup(response.content,features="html.parser")
 urls = []
-for i in range(2):
+While True:
     url = getnextpage(soup)
     if not url:
         break
